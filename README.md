@@ -1,34 +1,36 @@
-# Flowers That Never Fade 🌷
+# Second Best 🌸
 
-*A little garden where flowers bloom forever.*
+*A tiny universe of flowers, made just for you.*
 
-An interactive flower website featuring a 3D floral world and an animated ASCII lily bouquet.
+An interactive 3D botanical experience paired with animated procedural ASCII lilies, synced ambient glowing particles, and an integrated audio player with dynamic typewriter lyrics for **"Second Best" by Laufey**.
 
-https://ascii-flowers-nu.vercel.app/
+---
 
-## Preview
-<img width="959" height="473" alt="image" src="https://github.com/user-attachments/assets/89d53bbb-45af-42e1-ae51-6fc87513aad8" />
+## Features
 
-<img width="958" height="474" alt="image" src="https://github.com/user-attachments/assets/ea0a0c09-1382-45a2-b7b6-54ae00f7c616" />
+- **3D Surreal Flower Landing**: Interactive Three.js WebGL hero scene with iridescent glass petals, pearls, and depth parallax.
+- **Cinematic ASCII Transition**: Procedural 3D-to-ASCII particle dissolve into an animated lily bouquet.
+- **Living ASCII Lily Bouquet**: Real-time canvas rasterizer with procedural petal blooming, wind sway, and cursor interaction.
+- **Laufey – "Second Best" Music Player**: Audio player bar with seek, rewind/forward 10s, volume control, and progress slider.
+- **Dynamic Typewriter Lyrics**: Synced per-line lyrics typewriter effect floating organically around the bouquet.
+- **Atmospheric Glow & Particles**: Ambient bokeh particles drifting in the background.
 
-
+---
 
 ## Run Locally
 
 ```bash
-git clone https://github.com/Bhumika-78/ascii-flowers.git
-cd ascii-flowers
+git clone https://github.com/rakalivestrong/SecondBest.git
+cd SecondBest
 npm install
 npm run dev
 ```
 
-## Built With
-
-- React
-- Vite
-- Three.js
-- JavaScript
-- CSS
-
 ---
-Made with ♡ & vibe coding by Bhumika 🌷
+
+## Tech Stack
+
+- **Three.js** (WebGL 3D Scene)
+- **HTML5 Canvas** (ASCII Rasterization Engine)
+- **Vite** (Build Tool)
+- **Modern JavaScript & CSS**
