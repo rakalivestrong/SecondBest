@@ -1,0 +1,8 @@
+{
+  "name": "Living ASCII Lily Bouquet",
+  "description": "An interactive generative art bouquet of colorful animated lilies rendered in real time with procedural ASCII characters on HTML Canvas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

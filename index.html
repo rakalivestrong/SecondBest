@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Living ASCII Lily Bouquet</title>
+    <meta
+      name="description"
+      content="An interactive generative art bouquet of colorful animated lilies rendered in real time with procedural ASCII characters on HTML Canvas."
+    />
+    <meta property="og:title" content="Living ASCII Lily Bouquet" />
+    <meta
+      property="og:description"
+      content="An interactive generative art bouquet of colorful animated lilies rendered in real time with procedural ASCII characters on HTML Canvas."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- PART 1: THE FLOWER DIMENSION (3D WEBGL HERO LANDING) -->
+    <section id="landing-view" class="view is-active" aria-label="The Flower Dimension">
+      <canvas id="dimension-canvas" aria-hidden="true"></canvas>
+      <div class="dimension-scrim" aria-hidden="true"></div>
+
+      <main id="dimension-ui" class="dimension-ui">
+        <p class="hero-kicker">A LITTLE SOMETHING FOR YOU &#10035;</p>
+
+        <h1 class="hero-headline">
+          Flowers don&rsquo;t need a reason.<br />
+          But you <em class="hero-italic">deserve them</em> anyway.
+        </h1>
+
+        <p class="hero-subtitle">
+          A tiny universe of flowers, made just for you.
+        </p>
+
+        <div class="hero-portal-wrap">
+          <button id="enter-garden-btn" class="portal-trigger" type="button">
+            <span class="portal-corners" aria-hidden="true"></span>
+            <span class="portal-label">ENTER THE GARDEN</span>
+            <span class="portal-arrow" aria-hidden="true">&#8599;</span>
+          </button>
+
+
+        </div>
+      </main>
+    </section>
+
+    <!-- PART 2: TRANSITION PARTICLE OVERLAY -->
+    <canvas id="transition-canvas" aria-hidden="true"></canvas>
+
+    <!-- PART 3, 4 & 5: EXISTING ASCII BOUQUET EXPERIENCE -->
+    <section id="bouquet-view" class="view" aria-label="Interactive ASCII Lily Bouquet" hidden>
+      <canvas id="bouquet-canvas" aria-label="Interactive animated ASCII lily bouquet"></canvas>
+
+      <div id="music-lyrics" class="music-lyrics" aria-live="polite">“Second Best”</div>
+
+      <nav id="garden-controls" aria-label="Bouquet controls">
+        <button id="back-to-garden-btn" class="garden-ctrl-btn" type="button" aria-label="Back to landing page">
+          <span class="ctrl-icon" aria-hidden="true">&#8592;</span>
+          <span>Back</span>
+        </button>
+        <button id="replay-bouquet-btn" class="garden-ctrl-btn" type="button" aria-label="Replay blooming sequence">
+          <span class="ctrl-icon" aria-hidden="true">&#8635;</span>
+          <span>Replay</span>
+        </button>
+      </nav>
+
+      <div id="music-player-bar" class="music-player-bar" aria-label="Audio player">
+        <button id="music-prev-btn" class="music-btn" type="button" aria-label="Rewind 10 seconds" title="Rewind 10s">&#9198;</button>
+        <button id="music-play-btn" class="music-btn" type="button" aria-label="Play or pause" title="Play/Pause">
+          <span id="music-play-icon">▶</span>
+        </button>
+        <button id="music-next-btn" class="music-btn" type="button" aria-label="Forward 10 seconds" title="Forward 10s">&#9197;</button>
+
+        <span class="music-track-title">Laufey – Second Best</span>
+
+        <span id="music-time-current" class="music-time">0:00</span>
+        <input id="music-progress" class="music-slider" type="range" min="0" max="205" value="0" aria-label="Audio progress slider" />
+        <span id="music-time-duration" class="music-time">3:25</span>
+
+        <span class="music-vol-icon">&#128266;</span>
+        <input id="music-volume" class="music-slider music-volume-slider" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume slider" />
+      </div>
+
+
+
+      <div id="easter-egg-wrap">
+        <button
+          id="easter-egg-btn"
+          class="easter-egg-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="easter-egg-popup"
+        >
+          Did you just witness something beautiful?
+        </button>
+      </div>
+
+      <div
+        id="easter-egg-popup"
+        class="easter-egg-popup"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="easter-egg-message"
+        hidden
+      >
+        <div class="easter-egg-card">
+          <button
+            id="easter-egg-close"
+            class="easter-egg-close"
+            type="button"
+            aria-label="Close message"
+          >
+            &times;
+          </button>
+          <p id="easter-egg-message" class="easter-egg-message">
+            Good. My job here is done. Now go touch some grass. <span class="easter-egg-heart" aria-hidden="true">&#9825;</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
